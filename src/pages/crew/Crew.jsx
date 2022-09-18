@@ -37,6 +37,8 @@ const Crew = () => {
 						<Carousel
 							wrapAround={true}
 							animation={'zoom'}
+							scrollMode={'page'}
+							swiping={true}
 							// withoutControls={true}
 						>
 							{crewData.map((crew, index) => {
