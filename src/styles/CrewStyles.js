@@ -19,14 +19,14 @@ export const CarouselWrapper = styled.div`
 		left: 50%;
 		top: unset !important;
 		bottom: -30px;
-		translate: -50%;
+		transform: translateX(-50%);
 
 		display: flex;
 		gap: 0.5rem;
 	}
 
 	li > button {
-		fill: var(--white) !important;
+		/* fill: var(--white) !important; */
 		width: 10px;
 		height: 10px;
 	}

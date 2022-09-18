@@ -23,6 +23,15 @@ import Carousel from 'nuka-carousel';
 const Crew = () => {
 	const crewData = data.crew;
 	const [tabIndex, setTabIndex] = useState(0);
+
+	const defaultControlsConfig = {
+		nextButtonText: '',
+		prevButtonText: '',
+		pagingDotsStyle: {
+			fill: 'white',
+		},
+	};
+
 	return (
 		<SectionWrapper img={[desktop, tablet, mobile]}>
 			<SectionHeaderText mobile>
@@ -41,6 +50,7 @@ const Crew = () => {
 							swiping={true}
 							dragging={true}
 							dragThreshold={0}
+							defaultControlsConfig={defaultControlsConfig}
 							// withoutControls={true}
 						>
 							{crewData.map((crew, index) => {
