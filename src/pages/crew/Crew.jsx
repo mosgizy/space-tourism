@@ -39,6 +39,8 @@ const Crew = () => {
 							animation={'zoom'}
 							scrollMode={'page'}
 							swiping={true}
+							dragging={true}
+							dragThreshold={0}
 							// withoutControls={true}
 						>
 							{crewData.map((crew, index) => {
