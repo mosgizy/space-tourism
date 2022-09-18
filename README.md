@@ -1,3 +1,9 @@
+# Image hosting
+
+Hosting the image on google photos and then use [labnol.org](https://www.labnol.org/embed/google/photos/) to generate a usable link to display on the website
+
+Using [React swipe](https://openbase.com/js/nuka-carousel) for the swipe functionality for the crew section
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
