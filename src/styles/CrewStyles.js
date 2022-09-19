@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const CarouselWrapper = styled.div`
 	margin-block-start: 1.5rem;
 	position: relative;
-	border-bottom: 2px solid var(--underline);
 
 	img {
 		height: 300px;
@@ -17,8 +16,8 @@ export const CarouselWrapper = styled.div`
 	ul {
 		position: absolute !important;
 		left: 50%;
-		top: unset !important;
-		bottom: -30px;
+		top: calc(40% + 5vh) !important;
+		/* bottom: 15.5rem; */
 		transform: translateX(-50%);
 
 		display: flex;
@@ -26,7 +25,6 @@ export const CarouselWrapper = styled.div`
 	}
 
 	li > button {
-		/* fill: var(--white) !important; */
 		width: 10px;
 		height: 10px;
 	}
@@ -34,8 +32,24 @@ export const CarouselWrapper = styled.div`
 
 export const ImageWrapper = styled.div`
 	display: flex;
+	border-bottom: 2px solid var(--underline);
 `;
 
-export const infoContent = styled.div``;
-export const Title = styled.div``;
+export const infoContent = styled.div`
+	display: flex;
+`;
+export const Title = styled.div`
+	text-transform: uppercase;
+	margin-block: 1.5rem;
+	p {
+		color: var(--white);
+		mix-blend-mode: normal;
+		opacity: 0.5;
+	}
+`;
 export const AboutText = styled.div``;
+export const MemberInfoWrapper = styled.div`
+	margin-block-start: 4rem;
+	text-align: center;
+	line-height: 1.6;
+`;

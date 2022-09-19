@@ -121,6 +121,7 @@ export const SectionContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding-inline: 1rem;
 
 	@media screen and (min-width: 1280px) {
 		flex-direction: row;

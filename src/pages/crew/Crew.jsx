@@ -13,6 +13,8 @@ import {
 	CarouselWrapper,
 	ImageWrapper,
 	Title,
+	infoContent,
+	MemberInfoWrapper,
 } from '../../styles/CrewStyles';
 import desktop from '../../resources/assets/crew/background-crew-desktop.jpg';
 import tablet from '../../resources/assets/crew/background-crew-tablet.jpg';
@@ -37,42 +39,34 @@ const Crew = () => {
 			<SectionHeaderText mobile>
 				<span>0.2</span> meet your crew
 			</SectionHeaderText>
-			<SectionContainer>
-				<Header>
-					<SectionHeaderText desktop>
-						<span>0.2</span> meet your crew
-					</SectionHeaderText>
-					<CarouselWrapper>
-						<Carousel
-							wrapAround={true}
-							animation={'zoom'}
-							scrollMode={'page'}
-							swiping={true}
-							dragging={true}
-							dragThreshold={0}
-							defaultControlsConfig={defaultControlsConfig}
-							// withoutControls={true}
-						>
-							{crewData.map((crew, index) => {
-								return (
-									<ImageWrapper>
-										<Img key={index} src={crew.images.png} alt="crews" />
-									</ImageWrapper>
-								);
-							})}
-						</Carousel>
-					</CarouselWrapper>
-				</Header>
-				<SectionContentWrapper>
-					<Title>
-						<p>{crewData[tabIndex].role}</p>
-						<h4>{crewData[tabIndex].name}</h4>
-					</Title>
-					<SectionContent>
-						<AboutText>{crewData[tabIndex].bio}</AboutText>
-					</SectionContent>
-				</SectionContentWrapper>
-			</SectionContainer>
+			<CarouselWrapper>
+				<Carousel
+					wrapAround={true}
+					animation={'zoom'}
+					scrollMode={'page'}
+					swiping={true}
+					dragging={true}
+					dragThreshold={0}
+					defaultControlsConfig={defaultControlsConfig}
+				>
+					{crewData.map((crew, index) => {
+						return (
+							<infoContent>
+								<ImageWrapper>
+									<Img key={index} src={crew.images.png} alt="crews" />
+								</ImageWrapper>
+								<MemberInfoWrapper>
+									<Title>
+										<p>{crewData[index].role}</p>
+										<h4>{crewData[index].name}</h4>
+									</Title>
+									<AboutText>{crewData[index].bio}</AboutText>
+								</MemberInfoWrapper>
+							</infoContent>
+						);
+					})}
+				</Carousel>
+			</CarouselWrapper>
 		</SectionWrapper>
 	);
 };
