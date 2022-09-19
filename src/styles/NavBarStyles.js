@@ -102,6 +102,7 @@ export const NavLinks = styled.nav`
 	flex-direction: column;
 	gap: 2rem;
 	padding-inline-start: 1.5rem;
+	user-select: hidden;
 
 	.home {
 		border-right: ${({ activeLink }) =>
