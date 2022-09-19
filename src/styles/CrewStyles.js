@@ -16,9 +16,9 @@ export const CarouselWrapper = styled.div`
 	ul {
 		position: absolute !important;
 		left: 50%;
-		top: calc(40% + 5vh) !important;
-		/* bottom: 15.5rem; */
-		transform: translateX(-50%);
+		top: 49% !important;
+		/* bottom: 50%; */
+		transform: translate(-50%);
 
 		display: flex;
 		gap: 0.5rem;
