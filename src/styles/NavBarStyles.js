@@ -69,6 +69,7 @@ export const NavLinkWrapper = styled.div`
 	backdrop-filter: blur(81.5485px);
 	transform: translateX(${({ active }) => (active ? '0' : '100%')});
 	transition: transform 0.35s ease-in-out;
+	z-index: 100;
 
 	@media screen and (min-width: 641px) {
 		all: unset;
