@@ -37,6 +37,7 @@ export const Hamburger = styled.div`
 		justify-content: flex-end;
 		align-items: center;
 		flex: 0 0 60%;
+
 		.line {
 			position: relative;
 			height: 1px;
@@ -45,6 +46,7 @@ export const Hamburger = styled.div`
 			width: 29rem;
 			margin-right: -2rem;
 			background-color: var(--white);
+			mix-blend-mode: normal;
 			z-index: 1;
 		}
 	}
@@ -52,6 +54,7 @@ export const Hamburger = styled.div`
 
 export const HamburgerWrapper = styled.div`
 	cursor: pointer;
+	user-select: none;
 
 	@media screen and (min-width: 641px) {
 		display: none;
@@ -69,7 +72,6 @@ export const NavLinkWrapper = styled.div`
 	backdrop-filter: blur(81.5485px);
 	transform: translateX(${({ active }) => (active ? '0' : '100%')});
 	transition: transform 0.35s ease-in-out;
-	z-index: 100;
 
 	@media screen and (min-width: 641px) {
 		all: unset;
@@ -91,6 +93,7 @@ export const CloseIcon = styled.div`
 	margin-block-end: 4rem;
 	padding-inline: 1.5rem;
 	cursor: pointer;
+	user-select: none;
 
 	@media screen and (min-width: 641px) {
 		display: none;
@@ -102,7 +105,7 @@ export const NavLinks = styled.nav`
 	flex-direction: column;
 	gap: 2rem;
 	padding-inline-start: 1.5rem;
-	user-select: hidden;
+	user-select: none;
 
 	.home {
 		border-right: ${({ activeLink }) =>

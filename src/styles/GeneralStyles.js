@@ -42,7 +42,19 @@ const GlobalStyle = createGlobalStyle`
         font-family:var(--primary-font),sans-serif;
         background-color: black;
         color: white;
+		position: relative;
+		z-index: -3;
     }
+
+	#root{
+		position: relative;
+		z-index: -7;
+	}
+
+	main{
+		position: relative;
+		z-index: -2;
+	}
 
     h1,h2,h3,h4,h5{
         font-family:var(--secondary-font),serif;
@@ -103,9 +115,11 @@ export const SectionWrapper = styled.section`
 	background-image: url(${(props) => props.img[2]});
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding-block: 8rem 2rem;
+	padding-block-start: 8rem;
 	overflow: hidden;
 	padding-inline: 1.5rem;
+	position: relative;
+	z-index: -1;
 
 	@media screen and (min-width: 641px) {
 		background-image: url(${(props) => props.img[1]});
@@ -113,7 +127,6 @@ export const SectionWrapper = styled.section`
 
 	@media screen and (min-width: 1280px) {
 		background-image: url(${(props) => props.img[0]});
-		display: ${({ flex }) => flex};
 	}
 `;
 
@@ -125,12 +138,18 @@ export const SectionContainer = styled.div`
 
 	@media screen and (min-width: 1280px) {
 		flex-direction: row;
-		max-width: 1400px;
 		width: 100%;
-		margin: auto;
 		padding-inline: 1rem;
 	}
 `;
+
+export const Container = styled.div`
+	@media screen and (min-width: 1280px) {
+		max-width: ${({ maxWidth }) => maxWidth}px;
+		margin: auto;
+	}
+`;
+
 export const Header = styled.header`
 	.carousel {
 		overflow: hidden;
@@ -193,7 +212,6 @@ export const SectionHeaderText = styled.p`
 	letter-spacing: 3.375px;
 	text-transform: uppercase;
 	text-align: center;
-	display: ${({ mobile }) => (mobile ? 'block' : 'none')};
 
 	@media screen and (min-width: 641px) {
 		text-align: left;
@@ -204,8 +222,10 @@ export const SectionHeaderText = styled.p`
 		mix-blend-mode: normal;
 		opacity: 0.25;
 	}
+
 	@media screen and (min-width: 1280px) {
-		display: ${({ desktop }) => (desktop ? 'block' : 'none')};
+		margin-block-start: 4rem;
+		padding-inline-start: unset;
 	}
 `;
 

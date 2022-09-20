@@ -59,7 +59,7 @@ const NavBar = () => {
 						</CloseIcon>
 						<NavLinks activeLink={active}>
 							<CustomNavLink
-								to="/home"
+								to="/"
 								name="home"
 								onClick={closeNav}
 								className="home"
