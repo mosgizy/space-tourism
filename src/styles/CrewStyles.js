@@ -89,7 +89,13 @@ export const Title = styled.div`
 		opacity: 0.5;
 	}
 `;
-export const AboutText = styled.div``;
+export const AboutText = styled.div`
+	color: var(--secondary);
+
+	@media screen and (min-width: 1280px) {
+		line-height: 32px;
+	}
+`;
 export const MemberInfoWrapper = styled.div`
 	margin-block-start: 4rem;
 	text-align: center;

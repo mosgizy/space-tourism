@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Header = styled.header`
 	width: 100%;
 	text-align: center;
-	margin-block-start: 1rem;
 `;
 
 export const ImageWrapper = styled.div`
@@ -22,6 +21,8 @@ export const TabContainer = styled.div`
 	gap: 2rem;
 	@media screen and (min-width: 1280px) {
 		justify-content: flex-start;
+		flex-direction: ${({ flex }) => flex};
+		justify-content: ${({ flex }) => flex && 'center'};
 	}
 `;
 export const TabWrapper = styled.div`
@@ -31,7 +32,6 @@ export const TabWrapper = styled.div`
 	color: var(--secondary);
 	cursor: pointer;
 	transition: var(--transition);
-
 	border-bottom: ${({ active }) =>
 		active === true ? '3px solid var(--white)' : 'none'};
 

@@ -117,7 +117,7 @@ export const SectionWrapper = styled.section`
 	background-size: cover;
 	padding-block-start: 8rem;
 	overflow: hidden;
-	padding-inline: 1.5rem;
+	padding-inline: ${({ paddingInline }) => paddingInline};
 	position: relative;
 	z-index: -1;
 
@@ -134,12 +134,13 @@ export const SectionContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-inline: 1rem;
+	padding-inline: ${({ paddingInline }) => paddingInline};
+	margin-block: 1rem;
 
 	@media screen and (min-width: 1280px) {
-		flex-direction: row;
+		flex-direction: ${({ direction }) => direction};
 		width: 100%;
-		padding-inline: 1rem;
+		justify-content: space-between;
 	}
 `;
 
@@ -147,6 +148,7 @@ export const Container = styled.div`
 	@media screen and (min-width: 1280px) {
 		max-width: ${({ maxWidth }) => maxWidth}px;
 		margin: auto;
+		margin-inline-start: ${({ marginInline }) => marginInline};
 	}
 `;
 

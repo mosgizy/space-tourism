@@ -31,7 +31,7 @@ const Crew = () => {
 	};
 
 	return (
-		<SectionWrapper img={[desktop, tablet, mobile]}>
+		<SectionWrapper img={[desktop, tablet, mobile]} paddingInline={'1.5rem'}>
 			<Container maxWidth={1400}>
 				<SectionHeaderText>
 					<span>0.2</span> meet your crew

@@ -12,7 +12,11 @@ import desktop from '../../resources/assets/destination/background-destination-d
 import tablet from '../../resources/assets/destination/background-destination-tablet.jpg';
 import mobile from '../../resources/assets/destination/background-destination-mobile.jpg';
 import data from '../../resources/data.json';
-import { ImageWrapper, Header } from '../../styles/DestinationStyles';
+import {
+	ImageWrapper,
+	Header,
+	TabWrapper,
+} from '../../styles/DestinationStyles';
 import Tab from '../../components/Tabs';
 
 const Destination = () => {
@@ -32,7 +36,7 @@ const Destination = () => {
 				<SectionHeaderText mobile>
 					<span>0.1</span> pick your destination
 				</SectionHeaderText>
-				<SectionContainer>
+				<SectionContainer paddingInline={'1rem'} direction={'row'}>
 					<Header>
 						<ImageWrapper>
 							<Img src={imageUrl} alt="image of the moon" />
@@ -43,6 +47,7 @@ const Destination = () => {
 							setTabIndex={setTabIndex}
 							tab={tabIndex}
 							data={destinationData}
+							TabWrapper={TabWrapper}
 						/>
 						<SectionContent>
 							<h1>{destinationData[tabIndex].name}</h1>
