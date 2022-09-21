@@ -72,7 +72,7 @@ export const NavLinkWrapper = styled.div`
 	height: 100vh;
 	width: 15.875rem;
 	padding-block: 2.5rem;
-	background-color: rgba(255, 255, 255, 0.04);
+	background-color: rgba(255, 255, 255, 0.4);
 	backdrop-filter: blur(81.5485px);
 	transform: translateX(${({ active }) => (active ? '0' : '100%')});
 	transition: transform 0.35s ease-in-out;

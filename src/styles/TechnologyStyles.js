@@ -44,6 +44,11 @@ export const TabWrapper = styled.div`
 	transition: var(--transition);
 	cursor: pointer;
 
+	&:hover {
+		background-color: var(--white);
+		color: var(--primary);
+	}
+
 	@media screen and (min-width: 1280px) {
 		width: 80px;
 		height: 80px;
