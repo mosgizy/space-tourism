@@ -29,6 +29,10 @@ export const NavWrapper = styled.div`
 		padding-block: unset;
 		height: 6rem;
 	}
+
+	@media screen and (min-width: 1280px) {
+		margin-block: 2rem;
+	}
 `;
 
 export const Hamburger = styled.div`

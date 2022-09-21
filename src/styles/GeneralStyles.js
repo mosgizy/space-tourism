@@ -149,6 +149,7 @@ export const Container = styled.div`
 		max-width: ${({ maxWidth }) => maxWidth}px;
 		margin: auto;
 		margin-inline-start: ${({ marginInline }) => marginInline};
+		margin-block-start: 4rem;
 	}
 `;
 
