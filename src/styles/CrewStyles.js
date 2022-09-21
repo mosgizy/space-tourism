@@ -97,7 +97,7 @@ export const AboutText = styled.div`
 	}
 `;
 export const MemberInfoWrapper = styled.div`
-	margin-block-start: 4rem;
+	margin-block-start: 2.5rem;
 	text-align: center;
 	line-height: 1.6;
 
